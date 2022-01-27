@@ -1,0 +1,37 @@
+= Nginx Ingress
+
+- Install nginx ingress controller
++
+https://kubernetes.github.io/ingress-nginx/deploy/#quick-start
+
+- Create a simple workload using a deployment for nginx
+
+- Mount the following nginx config on your pod inside "/etc/nginx/conf.d/"
++
+.my-site.conf
+----
+server {
+  listen       80;
+  server_name  alex.sonar.inno.wb.bforbank.com;
+
+  location /foo {
+    alias /usr/share/nginx/html/;
+    index  index.html index.htm;
+  }
+
+  error_page   500 502 503 504  /50x.html;
+  location = /50x.html {
+    root   /usr/share/nginx/html;
+  }
+}
+----
+
+- Create a service to expose your deployment
+
+- Create an ingress for your service with class "nginx"
+
+- Create a DNS entry to point to the IP address of your service
+
+- Verify the nginx controller configuration (make sure your config is well written inside)
+
+- Verify that your nginx is visible in the browser

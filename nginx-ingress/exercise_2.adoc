@@ -1,0 +1,4 @@
+= Nginx Ingress Behind GCP Ingess
+
+. Based on the previous exercise, modify the nginx ingress controller to be of type ClusterIP and deploy a GCP native load balancer that points to the ingress controller.
+

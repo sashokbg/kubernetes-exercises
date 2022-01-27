@@ -1,0 +1,9 @@
+---
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: "workload-cert"
+  namespace: "sandbox"
+spec:
+  domains:
+  - "test.gitlab.inno.wb.bforbank.com"

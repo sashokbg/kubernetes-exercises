@@ -1,0 +1,15 @@
+== Manual actions
+
+. Create an oauth client ID and add as authorized URL: +
+https://iap.googleapis.com/v1/oauth/clientIds/<your-new-oauth-client-id>:handleRedirect
+
+. Create DNS A record test.gitlab.inno.wb.bforbank.com and associate IP from the ingress.
+
+. Add "IAP Secure Web-app User" role to your user +
+https://console.cloud.google.com/security/iap?referrer=search&project=bfb-cicd-inno0
+
+== Sources
+
+* link:https://cloud.google.com/iap/docs/enabling-kubernetes-howto[GKE IAP]
+* link:https://cloud.google.com/kubernetes-engine/docs/how-to/ingress-features#associating_backendconfig_with_your_ingress[GKE Ingress Backend Config]
+* link:https://cloud.google.com/kubernetes-engine/docs/concepts/ingress[GKE Ingress Config]

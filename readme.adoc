@@ -1,0 +1,17 @@
+= Kubernetes Sandbox
+
+This project's objective is to serve as a test playground for different kubernetes and gcp concepts and recipes.
+
+== Optional Requirements
+
+- Starting a bastion
+
+----
+gcloud compute start-iap-tunnel dev-bastion 80 --local-host-port=localhost:3333 --project=bfb-cicd-inno1
+----
+
+- Running kubectl with local proxy
+
+----
+alias kubectl="HTTPS_PROXY=localhost:3333 kubectl"
+----
