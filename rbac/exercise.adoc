@@ -1,0 +1,6 @@
+= RBAC Exercise
+
+. Create a simple pod using the "pod.yaml" file
+. Connect to the pod and try "kubectl run test --image=alpine" +
+An error message is presented denying access
+. Make it work

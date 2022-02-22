@@ -4,7 +4,6 @@ kind: ConfigMap
 metadata:
   name: "nginx-config"
   namespace: "sandbox-ingress"
-  
 data:
   my-site.conf: |
     server {
